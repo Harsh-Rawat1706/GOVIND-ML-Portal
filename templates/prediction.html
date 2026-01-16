@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GOVIND Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='prediction.css') }}">
+</head>
+<body>
+
+<header class="nav">
+    <h2>Risk Prediction Portal</h2>
+    <a class="nav-link" href="{{ url_for('home') }}">← Back to Home</a>
+</header>
+
+<main>
+    <div class="container-prediction">
+
+        <div class="box-title">
+            <h1>Regional Risk Prediction</h1>
+        </div>
+
+        <div class="box-form">
+            <form method="POST" action="{{ url_for('prediction') }}">
+                <input type="date" name="date" required>
+                <input type="text" name="state" placeholder="State" required>
+                <input type="text" name="district" placeholder="District" required>
+                <input type="number" name="pincode" placeholder="Pincode" required>
+                <input type="number" name="age_0_5" placeholder="Age 0-5" required>
+                <input type="number" name="age_5_17" placeholder="Age 5-17" required>
+                <input type="number" name="age_18_plus" placeholder="Age 18+" required>
+                <button type="submit">Predict Risk</button>
+            </form>
+        </div>
+
+        <div class="prediction-result">
+            {% if prediction_result %}
+                <h3>{{ prediction_result }}</h3>
+            {% else %}
+                <p>Enter details and click Predict</p>
+            {% endif %}
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Risk Prediction Portal</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f2fe, #f3e8ff);
+    color: #1f2937;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #60a5fa, #c084fc);
+    padding: 16px 30px;
+    color: white;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.35);
+    transform: scale(1.05);
+}
+
+.container-prediction {
+    width: 60%;
+    margin: 70px auto;
+    background: white;
+    padding: 45px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.box-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.box-title h1 {
+    color: #4f46e5;
+}
+
+.box-form {
+    margin-bottom: 35px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #c7d2fe;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99,102,241,0.2);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(99,102,241,0.4);
+}
+
+.prediction-result {
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    background: #f5f3ff;
+    border: 2px dashed #a78bfa;
+    margin-top: 25px;
+}
+
+.result-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #4f46e5;
+}
+
+.placeholder {
+    color: #6b7280;
+    font-style: italic;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #60a5fa, #c084fc);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
